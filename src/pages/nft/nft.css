@@ -1,0 +1,130 @@
+#app {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container {
+  margin: 5px;
+  border: solid 2px red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.robot {
+  border: solid 2px black;
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+}
+hr {
+  border-color: rgba(0, 0, 0, 0.08);
+  margin: 5px 0;
+  background: none;
+}
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+.circle2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+.circle:after,
+.circle2:after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+.red {
+  background: red;
+}
+.orange {
+  background: orange;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+.black {
+  background: black;
+}
+.nose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  background: black;
+}
+.big {
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
+}
+.medium {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.tiny {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.mouth {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 40px;
+  height: 5px;
+  z-index: 1;
+}
+.smiling:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-width: 10px 20px 20px;
+  border-color: black transparent transparent transparent;
+  border-style: solid;
+  transform: translate(-50%, 0);
+}
+.frowning:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-width: 20px 20px 10px;
+  border-color: transparent transparent black transparent;
+  border-style: solid;
+  transform: translate(-50%, 0);
+}
+.closed {
+  background-color: black;
+}
